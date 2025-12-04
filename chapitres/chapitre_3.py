@@ -63,7 +63,6 @@ def quiz_magie(joueur, chemin_fichier = '../data/quiz_magie.json') :
 
 
 
-
 def chap3(joueur, chemin_fichier = "../data/sorts.json"):
     data = input_utils.load_fichier(chemin_fichier)
     print('f1')

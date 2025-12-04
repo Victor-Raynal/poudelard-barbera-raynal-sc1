@@ -1,4 +1,5 @@
 from utils import input_utils
+from univers import maison
 from univers import personnage
 
 def rencontrer_amis(joueur) :
@@ -65,3 +66,68 @@ def rencontrer_amis(joueur) :
     for i in joueur["Attributs"] :
         print("-", i, ":", joueur["Attributs"][i])
 
+
+
+def mot_de_bienvenue() :
+    return
+
+
+
+def ceremonie_repartition(joueur) :
+    questions = [
+        (
+            "Vous voyez un ami en danger. Que faites-vous ?",
+            ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l’aide", "Je reste calme et j’observe"],
+        ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Quel trait vous décrit le mieux ?",
+            ["Courageux et loyal", "Rusé et ambitieux", "Patient et travailleur", "Intelligent et curieux"],
+             ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Face à un défi difficile, vous...",
+            ["Foncez sans hésiter", "Cherchez la meilleure stratégie",
+             "Comptez sur tes amis", "Analysez le problème"],
+            ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        )
+    ]
+
+    print()
+    print("La cérémonie de répartition commence dans la Grande Salle...")
+    print("Le choixpeau magique t'observe longuement avant de poser ses question : ")
+
+    maison_choisie = maison.repartition_maison(joueur, questions)
+
+    print()
+    print("Le Choixpeau s'exclame :", maison_choisie, "!!!")
+    print("Tu rejoins les élèves de", maison_choisie, "sous les acclamations !")
+    joueur["Maison"] = maison_choisie
+
+
+
+def installation_salle_commune(joueur) :
+    fichier_maisons = input_utils.load_fichier("data/maisons.json")
+
+    print()
+    print(fichier_maisons[joueur["Maison"]]["emoji"], fichier_maisons[joueur["Maison"]]["description"])
+    print(fichier_maisons[joueur["Maison"]]["message_installation"])
+    print("Les couleurs de votre maison sont :", fichier_maisons[joueur["Maison"]]["couleurs"][0], "et", fichier_maisons[joueur["Maison"]]["couleurs"][1])
+
+    for i in fichier_maisons[joueur["Maison"]]["bonus_attributs"] :
+        joueur["Attributs"][i] += fichier_maisons[joueur["Maison"]]["bonus_attributs"][i]
+
+    print()
+    print("Vos attributs ont été mis à jour.")
+    personnage.afficher_personnage(joueur)
+
+
+
+def lancer_chapitre_2(joueur) :
+    rencontrer_amis(joueur)
+    mot_de_bienvenue()
+    ceremonie_repartition(joueur)
+    installation_salle_commune(joueur)
+
+    print("\n\n")
+    print("Vous avez terminé le chapitre 2 avec succès ! Les cours à Poudlard peuvent à présent démarrer.")

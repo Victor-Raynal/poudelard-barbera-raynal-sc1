@@ -15,20 +15,17 @@ def test_pas_vide (nombre):
     return True
 
 def test_moins (nombre):
-    cpt =  0
-    for i in nombre :
-       if i == '-' :
-           cpt+= 1
-       if cpt > 1 :
-           return False
-    if nombre == '' :
+    if nombre == '-' :
         return False
+    for i in range(len(nombre)):
+        if nombre[i] == '-' :
+            if i != 0 :
+                return False
     return True
-
 def test_cara_valides (nombre):
-    caracteres_valides = [ord('-'), ord('0'), ord('1'), ord('2'), ord('3'), ord('4'), ord('5'), ord('6'), ord('7'),ord('8'), ord('9')]
+    caracteres_valides = "-0123456789"
     for i in nombre :
-        if ord(i) not in caracteres_valides:
+        if i not in caracteres_valides:
             return False
     return True
 

@@ -8,7 +8,7 @@ def test_bornes (nombre, min_val=None,max_val=None):
     if (min_val is not None and int(nombre) < min_val) or (max_val is not None and int(nombre) > max_val):
         return False
     return True
-
+ 
 def test_pas_vide (nombre):
     if nombre == '' :
         return False

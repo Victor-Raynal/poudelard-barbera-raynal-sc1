@@ -17,7 +17,7 @@ def demander_nombre(message, min_val = None, max_val = None) :
         valide = True
         i = 0
 
-        if nombre == "" :
+        if nombre == "" or nombre == "-" :
             valide = False
             print()
             print("Le nombre saisi n'est pas correct")

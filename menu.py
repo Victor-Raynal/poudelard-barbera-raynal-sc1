@@ -23,12 +23,8 @@ def lancer_chapitre(chapitre, joueur) :
     elif chapitre == 2 :
         chapitres.chapitre_2.lancer_chapitre_2(joueur)
     elif chapitre == 3 :
-        pass
         chapitres.chapitre_3.lancer_chapitre_3(joueur)
     elif chapitre == 4 :
-        pass
         chapitres.chapitre_4.lancer_chapitre_4(joueur)
     elif chapitre == 5 :
-        pass
         chapitres.chapitre_5_extension.lancer_chapitre_5(joueur)
-

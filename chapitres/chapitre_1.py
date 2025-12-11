@@ -1,7 +1,23 @@
 from utils import input_utils
 from univers import personnage
+from utils.input_utils import afficher_texte
+
 
 def introduction() :
+    print('''Bienvenue cher joueur ! Nous vous proposons une histoire aussi magique que détaillée où vous serez plongé dans l'univers 
+d'Harry Potter et vivrez à votre manière les moments les plus mémorables d'un élève débutant à Poudlard !
+
+Cette chaude soirée d'août se clôt alors qu'une légère brise ébouriffe tes cheveux. La libération de l'été a rapidement fait place à l'ennui.
+Après tout, chez les Dursley, mis à part les rares sorties qu'on t'autorise, le seul passe-temps toléré est la contemplation du cagibi.
+D'un soupir, tu te hisses sur la balançoire, le fragile équilibre assuré par tes bras tendus, tu es penché en arrière et tes cheveux caressent le gazon. 
+Alors que le sang afflue dans ta tête, tu remarques qu'il commence à faire sombre. Si tu ne souhaites pas subir les injures de ton tyrannique oncle
+Vernon, il te faudra rentrer au plus vite. Tu prends cependant le temps d'observer le tableau qui se dessine devant toi : 
+La tige d'un gris métallique de la balançoire, le sentier à peine discernable qui te raccompagnera, et ce chez-toi dont tu distingues la silhouette de loin. 
+Cet endroit qui est ton foyer mais où tu es traité en étranger. Cela dit, un détail interpelle ton regard, un point blanc semble voltiger au-dessus du toit.
+Poussé simultanément par ta curiosité et la peur d'être puni, tu rentres en vitesse. Alors que tu passes la boîte aux lettres, ton regard est attiré 
+par ton reflet dans la fenêtre luisante. Ses quatre yeux ronds te fixent, et son expression chargée d'une profonde interrogation comme pour te demander :
+"Au fond, qui es-tu ?"
+''')
     return
 
 
@@ -150,3 +166,5 @@ def lancer_chapitre_1() :
     print("Fin du chapitre 1 ! Votre aventure commence à Poudlard.")
 
     return joueur
+
+lancer_chapitre_1()

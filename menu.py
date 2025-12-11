@@ -52,6 +52,11 @@ def demander_continuer_partie() :
         exit()
     elif choix == "Reprendre la partie sauvegardée" :
         chapitre, joueur, maisons = sauvegarde_utils.load_sauvegarde()
+
+        if chapitre == None :
+            print("Aucune sauvegarde trouvée")
+            exit()
+
         lancer_chapitre(chapitre, joueur, maisons)
         return chapitre, joueur, maisons
     else :

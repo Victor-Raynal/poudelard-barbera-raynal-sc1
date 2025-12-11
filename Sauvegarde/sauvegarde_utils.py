@@ -9,6 +9,7 @@ def sauvegarder(chapitre, joueur, maisons) :
 
 def load_sauvegarde() :
     dico_sauvegarde = input_utils.load_fichier("sauvegarde/fichier_sauvegarde.json")
+    if dico_sauvegarde == {} :
+        return None, None, None
     return dico_sauvegarde["chapitre"], dico_sauvegarde["joueur"], dico_sauvegarde["maisons"]
-
 

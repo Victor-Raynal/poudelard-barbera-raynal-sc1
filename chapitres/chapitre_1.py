@@ -167,4 +167,3 @@ def lancer_chapitre_1() :
 
     return joueur
 
-lancer_chapitre_1()

@@ -20,7 +20,7 @@ def pool_sorts (data) :
             l_sorts_util.append(id_sort)
     return l_sorts_off, l_sorts_def, l_sorts_util
 
-def apprendre_sorts (joueur, chemin_fichier = '..data/sorts.json') :
+def apprendre_sorts (joueur, chemin_fichier = 'data/sorts.json') :
     data = input_utils.load_fichier(chemin_fichier)
     l_pool_sorts = pool_sorts(data)
     sorts_appris = []
@@ -46,7 +46,7 @@ def dialogue(sorts_appris) :
         print ('- {} ({}) : {}'.format(sorts_appris[i]['nom'], sorts_appris[i]['type'], sorts_appris[i]['description']))
         #time ici
 
-def quiz_magie(joueur, chemin_fichier = '../data/quiz_magie.json') :
+def quiz_magie(joueur, chemin_fichier = 'data/quiz_magie.json') :
     quiz = input_utils.load_fichier(chemin_fichier)
     print('\n', "Bienvenu au quiz de magie de poudlard !", '\n',"Réponds correctementaux 4 questions pour faire gagner des points à ta maison. ")
     compteur_de_points = 0
@@ -70,15 +70,9 @@ def quiz_magie(joueur, chemin_fichier = '../data/quiz_magie.json') :
 
 
 def lancer_chapitre_3(joueur, maisons):
-    apprendre_sorts(joueur, chemin_fichier='../data/sorts.json')
-    quiz_magie(joueur,chemin_fichier='../data/quiz_magie.json')
+    apprendre_sorts(joueur, chemin_fichier='data/sorts.json')
+    quiz_magie(joueur,chemin_fichier='data/quiz_magie.json')
     maison.actualiser_points_maison(maisons,joueur['Maison'], joueur['Score'])
     maison.afficher_maison_gagnante(maisons)
     personnage.afficher_personnage(joueur)
-'''
-pers = personnage.initialiser_personnage('test_nom','test_prn',[])
-pers ['Maison'] = 'Gryffondor'
-maisons = {'Gryffondor':0,'Serpentard':0,'Serdaigle': 0, 'Poufsouffle' : 0}
-lancer_chapitre_3(pers,maisons)
-utiliser pour tester chap3 uniquement
-'''
+

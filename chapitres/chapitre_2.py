@@ -67,10 +67,8 @@ def rencontrer_amis(joueur) :
         print("-", i, ":", joueur["Attributs"][i])
 
 
-
 def mot_de_bienvenue() :
     return
-
 
 
 def ceremonie_repartition(joueur) :
@@ -105,7 +103,6 @@ def ceremonie_repartition(joueur) :
     joueur["Maison"] = maison_choisie
 
 
-
 def installation_salle_commune(joueur) :
     fichier_maisons = input_utils.load_fichier("data/maisons.json")
 
@@ -120,7 +117,6 @@ def installation_salle_commune(joueur) :
     print()
     print("Vos attributs ont été mis à jour.")
     personnage.afficher_personnage(joueur)
-
 
 
 def lancer_chapitre_2(joueur) :

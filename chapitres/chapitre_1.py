@@ -18,7 +18,6 @@ Poussé simultanément par ta curiosité et la peur d'être puni, tu rentres en 
 par ton reflet dans la fenêtre luisante. Ses quatre yeux ronds te fixent, et son expression chargée d'une profonde interrogation comme pour te demander :
 "Au fond, qui es-tu ?"
 ''')
-    return
 
 
 def creer_personnage() :

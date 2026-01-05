@@ -68,7 +68,27 @@ def rencontrer_amis(joueur) :
 
 
 def mot_de_bienvenue() :
-    return
+    print('''
+    "Silence !!!
+La grande salle se fait silencieuse. Vos regards se tournent vers la bruyante figure argentée qui vous a interpellé.
+Après quelques seconde d'attente, le vieux sorcier se redresse et balaye la salle d'un regard chalereux.
+
+- Bienvenue à Poudlard. Ce château sera désormais votre foyer. Vous y apprendrez la magie, mais surtout à comprendre qui vous êtes réellement.
+
+Il marque une pause, et suite à un agile coup de baguette, de fines coulées de poussière dorée commencent à s'écouler 
+du plafond voûté.
+
+- Chacun de vous possède des qualités uniques. Pourtant, ce ne sont ni vos talents ni votre passé qui détermineront votre avenir ici, mais les choix que vous ferez.
+
+Un léger sourire apparaît sur son visage.
+
+- Il est maintenant temps que le Choixpeau révèle à quelle maison vous appartenez.
+
+La salle retient son souffle.
+La cérémonie de répartition peut commencer
+  
+    
+    ''')
 
 
 def ceremonie_repartition(joueur) :

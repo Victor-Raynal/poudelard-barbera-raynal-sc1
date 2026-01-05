@@ -10,7 +10,7 @@ def pool_sorts (data) :
     l_sorts_off = []
     l_sorts_def = []
     l_sorts_util = []
-#on distingue les différents pools de sorts disponibles
+
     for id_sort in range(Nombre_sorts):
         if data[id_sort]['type'] == 'Offensif' :
             l_sorts_off.append(id_sort)
@@ -34,17 +34,14 @@ def apprendre_sorts (joueur, chemin_fichier = 'data/sorts.json') :
 
 def dialogue(sorts_appris) :
     print ("Tu commences tes études à Poudlard...")
-    #faut mettre un time ici
     for i in range(len(sorts_appris)) :
         print("Tu viens d'apprendre le sortilège : {} ({}) ".format(sorts_appris[i]['nom'], sorts_appris[i]['type']))
         #time ici
         input("Appuie sur la touche Entrée pour continuer...")
     print('\n', 'Tu as terminé ton apprentissage de base à Poudlard !')
-    #time ici
     print('voici les sortilèges que tu maîtrises désormais : ', '\n')
     for i in range(len(sorts_appris)) :
         print ('- {} ({}) : {}'.format(sorts_appris[i]['nom'], sorts_appris[i]['type'], sorts_appris[i]['description']))
-        #time ici
 
 def quiz_magie(joueur, chemin_fichier = 'data/quiz_magie.json') :
     quiz = input_utils.load_fichier(chemin_fichier)

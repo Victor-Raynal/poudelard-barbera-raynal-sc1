@@ -4,7 +4,6 @@ from chapitres import chapitre_1
 from chapitres import chapitre_2
 from chapitres import chapitre_3
 from chapitres import chapitre_4
-from chapitres import chapitre_5_extension
 
 def lancer_chapitre(chapitre, joueur, maisons) :
 
@@ -15,20 +14,22 @@ def lancer_chapitre(chapitre, joueur, maisons) :
     elif chapitre == 3 :
         chapitre_3.lancer_chapitre_3(joueur, maisons)
     elif chapitre == 4 :
-        pass
-        chapitre_4.lancer_chapitre_4(joueur)
-    elif chapitre == 5 :
-        pass
-        chapitre_5_extension.lancer_chapitre_5(joueur)
+        chapitre_4.lancer_chapitre_4(joueur, maisons)
 
 
 def lancer_chapitre_suivant(chapitre, joueur, maisons) :
+
+    if chapitre == 5 :
+        print()
+        print()
+        print("Votre aventure est terminée !")
+        print("Merci d'avoir joué au jeu...")
+        exit()
 
     messages_chapitres = {
                            2 : "Lancer le chapitre 2 - Le voyage vers Poudlard",
                            3 : "Lancer le chapitre 3 - Les cours et la découverte de Poudlard",
                            4 : "Lancer le chapitre 4 - La finale de Quidditch",
-                           5 : "Lancer le chapitre 5 - "
                            }
 
     options = [messages_chapitres[chapitre], "Sauvegarder et quitter", "Quitter sans sauvegarder"]

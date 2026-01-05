@@ -1,5 +1,3 @@
-#début du chapitre 3
-#on va faire les cours et la découverte de poudlard
 import random
 from univers import personnage
 from utils import input_utils
@@ -36,7 +34,7 @@ def dialogue(sorts_appris) :
     print ("Tu commences tes études à Poudlard...")
     for i in range(len(sorts_appris)) :
         print("Tu viens d'apprendre le sortilège : {} ({}) ".format(sorts_appris[i]['nom'], sorts_appris[i]['type']))
-        #time ici
+
         input("Appuie sur la touche Entrée pour continuer...")
     print('\n', 'Tu as terminé ton apprentissage de base à Poudlard !')
     print('voici les sortilèges que tu maîtrises désormais : ', '\n')

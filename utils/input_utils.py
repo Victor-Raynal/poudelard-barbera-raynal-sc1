@@ -64,13 +64,6 @@ def load_fichier(chemin_fichier) :
     return donnes
 
 
-'''
-La fonction afficher_texte permet de formater les longs textes pour qu'ils ne débordent pas de la zone de texte. Les
-lignes ont une taille maximum de largeur_max caractères, un retour à la ligne est effectué sans tenir compte de la
-largeur de la ligne après chaque mot inclus dans la liste sauts_obligatoires et le texte est mis en pause au bout de 
-longueur_max lignes pour ne pas surcharger le lecteur.
-'''
-
 def afficher_texte(texte, sauts_obligatoires = None, longueur_max = None, largeur_max = 150) :
     print()
     liste_mots = texte.split()
@@ -102,7 +95,7 @@ def afficher_texte(texte, sauts_obligatoires = None, longueur_max = None, largeu
         i = 0
         while i < len(liste_lignes) :
             if i%longueur_max == 0 and i != 0 :
-                input() # "/Tapez entrée pour continuer/"
+                input()
             print(liste_lignes[i])
             i += 1
 
